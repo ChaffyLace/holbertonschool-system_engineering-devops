@@ -1,0 +1,18 @@
+flowchart TD
+    User["👤 User\nwww.foobar.com"]
+    DNS["🌐 DNS\nwww → 8.8.8.8\n(A Record)"]
+    
+    subgraph Server["🖥️ SERVER — IP: 8.8.8.8"]
+        Nginx["🌍 Nginx\nWeb Server"]
+        App["⚙️ Application Server"]
+        Code["📁 Code Base"]
+        DB[("🗄️ MySQL")]
+        
+        Nginx --> App --> Code
+        App --> DB
+    end
+    
+    User -->|"1. DNS Query"| DNS
+    DNS -->|"2. Returns 8.8.8.8"| User
+    User -->|"3. HTTP Request TCP/IP"| Nginx
+    Nginx -->|"4. Response"| User
