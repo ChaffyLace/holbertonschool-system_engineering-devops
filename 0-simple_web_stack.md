@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
     User["👤 User\nwww.foobar.com"]
     DNS["🌐 DNS\nwww → 8.8.8.8\n(A Record)"]
