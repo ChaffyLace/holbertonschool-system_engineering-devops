@@ -1,6 +1,6 @@
 ```mermaid 
 flowchart TD
-    User["👤 User\nwww.foobar.com"]
+    User["👤 foobar.com"]
     DNS["🌐 DNS\nA Record → 8.8.8.8"]
 
     FW1["🛡️ Firewall 1"]
